@@ -142,7 +142,7 @@ class _MovableBackgroundImageExampleState
         context: context,
         showDragHandle: true,
         constraints: BoxConstraints(
-          minWidth: min(MediaQuery.of(context).size.width, 360),
+          minWidth: min(MediaQuery.sizeOf(context).width, 360),
         ),
         builder: (context) {
           return Material(
@@ -205,9 +205,9 @@ class _MovableBackgroundImageExampleState
   }
 
   Size get _editorSize => Size(
-        MediaQuery.of(context).size.width -
+        MediaQuery.sizeOf(context).width -
             MediaQuery.of(context).padding.horizontal,
-        MediaQuery.of(context).size.height -
+        MediaQuery.sizeOf(context).height -
             kToolbarHeight -
             kBottomNavigationBarHeight -
             MediaQuery.of(context).padding.vertical,
@@ -335,7 +335,7 @@ class _MovableBackgroundImageExampleState
                         /// value higher than the device pixel ratio for higher
                         /// quality.
                         customPixelRatio: max(
-                            2000 / MediaQuery.of(context).size.width,
+                            2000 / MediaQuery.sizeOf(context).width,
                             MediaQuery.of(context).devicePixelRatio),
                       ),
 

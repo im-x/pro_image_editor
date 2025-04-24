@@ -592,7 +592,7 @@ class TextEditorState extends State<TextEditor>
           configs: widget.configs,
           length: min(
             350,
-            MediaQuery.of(context).size.height -
+            MediaQuery.sizeOf(context).height -
                 MediaQuery.of(context).viewInsets.bottom -
                 kToolbarHeight -
                 kBottomNavigationBarHeight -

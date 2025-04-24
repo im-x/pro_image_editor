@@ -42,7 +42,7 @@ class FrostedGlassTextSizeSlider extends StatelessWidget {
         width: 16,
         height: min(
             280,
-            MediaQuery.of(context).size.height -
+            MediaQuery.sizeOf(context).height -
                 MediaQuery.of(context).viewInsets.bottom -
                 kToolbarHeight -
                 kBottomNavigationBarHeight -

@@ -1059,7 +1059,7 @@ class PaintingEditorState extends State<PaintingEditor>
 
     if (paintModes.length <= 1) return const SizedBox.shrink();
 
-    double minWidth = min(MediaQuery.of(context).size.width, 600);
+    double minWidth = min(MediaQuery.sizeOf(context).width, 600);
     double maxWidth =
         max((paintModes.length + (_enableZoom ? 1 : 0)) * 80, minWidth);
     return Theme(
@@ -1079,7 +1079,7 @@ class PaintingEditorState extends State<PaintingEditor>
               child: ConstrainedBox(
                 constraints: BoxConstraints(
                   minWidth: minWidth,
-                  maxWidth: MediaQuery.of(context).size.width > 660
+                  maxWidth: MediaQuery.sizeOf(context).width > 660
                       ? maxWidth
                       : double.infinity,
                 ),
@@ -1208,7 +1208,7 @@ class PaintingEditorState extends State<PaintingEditor>
             configs: configs,
             length: min(
               350,
-              MediaQuery.of(context).size.height -
+              MediaQuery.sizeOf(context).height -
                   MediaQuery.of(context).viewInsets.bottom -
                   kToolbarHeight -
                   kBottomNavigationBarHeight -

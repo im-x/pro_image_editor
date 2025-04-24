@@ -204,8 +204,8 @@ class ExportStateHistory {
                 layer.scale;
         Size targetSize = Size(
             imageWidth,
-            MediaQuery.of(context).size.height /
-                MediaQuery.of(context).size.width *
+            MediaQuery.sizeOf(context).height /
+                MediaQuery.sizeOf(context).width *
                 imageWidth);
 
         Uint8List? result = await contentRecorderCtrl.captureFromWidget(

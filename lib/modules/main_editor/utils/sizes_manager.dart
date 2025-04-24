@@ -33,7 +33,7 @@ class SizesManager {
   double get allToolbarHeight => appBarHeight + bottomBarHeight;
 
   /// Getter for the screen size of the device.
-  Size get screen => MediaQuery.of(context).size;
+  Size get screen => MediaQuery.sizeOf(context);
 
   /// Size of the decoded image.
   Size decodedImageSize = const Size(0, 0);

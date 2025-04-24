@@ -112,7 +112,7 @@ class _PickImageExampleState extends State<PickImageExample>
         context: context,
         showDragHandle: true,
         constraints: BoxConstraints(
-          minWidth: min(MediaQuery.of(context).size.width, 360),
+          minWidth: min(MediaQuery.sizeOf(context).width, 360),
         ),
         builder: (context) {
           return Material(

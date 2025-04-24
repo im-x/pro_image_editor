@@ -820,7 +820,7 @@ class _CustomAppbarBottombarExampleState
           scrollDirection: Axis.horizontal,
           child: ConstrainedBox(
             constraints:
-                BoxConstraints(minWidth: MediaQuery.of(context).size.width),
+                BoxConstraints(minWidth: MediaQuery.sizeOf(context).width),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
@@ -874,7 +874,7 @@ class _CustomAppbarBottombarExampleState
             scrollDirection: Axis.horizontal,
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: min(MediaQuery.of(context).size.width, 500),
+                minWidth: min(MediaQuery.sizeOf(context).width, 500),
                 maxWidth: 500,
               ),
               child: Builder(builder: (context) {
